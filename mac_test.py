@@ -37,26 +37,16 @@ def mac():
 #main	
 if __name__ == '__main__':
 
-	print "\n"
-	print "\n"
-	print "NOVO Test"
-	print "\n"
-	print "\n"
-
 	mac()
 	#sys.exit(1)
 
-	os.system(" clear ")
-	print "\n"
-	
-	print "------Test Results------- "
+
 
         if mac_flag == 0:
                 print "mac      test function success"
-		sys.exit(1)
+		sys.exit(0)
         else:
                 print "mac      test function failure"
-		sys.exit(0)
-		
-	print "------------------------- "
+		sys.exit(1)
+
 

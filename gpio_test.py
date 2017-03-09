@@ -79,9 +79,9 @@ def gpio():
 	print "11The gpio value is: %d " %(int(value))
 	unexport_pins(106)
 	if value == 1:
-		gpio_flag = 1
-	else:
 		gpio_flag = 0
+	else:
+		gpio_flag = 1
 		return
 
         #p20_22
@@ -103,29 +103,17 @@ def gpio():
         print "22The gpio value is: %d " %(int(value))
         unexport_pins(103)
         if value == 1:
-                gpio_flag = 1
-        else:
                 gpio_flag = 0
+        else:
+                gpio_flag = 1
                 return	
 		
 #main	
 if __name__ == '__main__':
 
-	print "\n"
-	print "\n"
-	print "NOVO Test"
-	print "\n"
-	print "\n"
-
 	gpio()
-	#sys.exit(1)
 
-	os.system(" clear ")
-	print "\n"
-    #print "\n"
-	print "------Test Results------- "
-
-        if gpio_flag == 1:
+        if gpio_flag == 0:
                 print "gpio      test function success"
 		sys.exit(0)
         else:

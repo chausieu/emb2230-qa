@@ -31,28 +31,17 @@ def bluetooth():
 	print("read data: " + data)	
 
 	if data.find("ECHO") >= 0:
-		bluetooth_flag = 1
-	else:
 		bluetooth_flag = 0
+	else:
+		bluetooth_flag = 1
 
 #main	
 if __name__ == '__main__':
 
-	print "\n"
-	print "\n"
-	print "NOVO Test"
-	print "\n"
-	print "\n"
-
 	bluetooth()
-	#sys.exit(1)
 
-	os.system(" clear ")
-	print "\n"
-    #print "\n"
-	print "------Test Results------- "
 
-        if bluetooth_flag == 1:
+        if bluetooth_flag == 0:
                 print "bluetooth      test function success"
 		sys.exit(0)
         else:
