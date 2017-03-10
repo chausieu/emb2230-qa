@@ -5,9 +5,11 @@ res=`echo $?`   # get return result
 
 if [ $res = "1" ]; then  
 	echo "run burn-in"
+	echo 1 > /home/root/novo_test_20170307/config/stress_test.conf;
 	/home/root/novo_test_20170307/burn_in/burn-in_test.py &
 else
 	echo "run qt app"
+	echo 0 > /home/root/novo_test_20170307/config/stress_test.conf;
 	export QT_QPA_EGLFS_DISABLE_INPUT=1
 	export QT_QPA_EGLFS_HIDECURSOR=1
 	export TSLIB_TSDEVICE=/dev/input/event0

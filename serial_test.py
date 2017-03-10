@@ -15,6 +15,7 @@ serial_flag = -1
 #serial	
 def serial_f():
 	global serial_flag 
+	print ("in serial testing")
 	ser = serial.Serial('/dev/ttymxc2', 115200, timeout=1)
 	ser.write("0123456789")
 	if ser.read(10) == "0123456789":
