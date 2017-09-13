@@ -61,47 +61,17 @@ def gpio():
 	global gpio_flag
 
 	#p20_14 
-	export_pins(154)
-	setpindirection(154, "out")
-	writepins(154, 1)
-	unexport_pins(154)
+	export_pins(114)
+	setpindirection(114, "out")
+	writepins(114, 1)
+	unexport_pins(114)
 
-	#p20_21
-	export_pins(155)
-	setpindirection(155, "out")
-	writepins(155, 1)
-	unexport_pins(155)
-
-	#p20_5
-        export_pins(106)
-        setpindirection(106, "in")
-	value = readpins(106)
-	print "11The gpio value is: %d " %(int(value))
-	unexport_pins(106)
-	if value == 1:
-		gpio_flag = 0
-	else:
-		gpio_flag = 1
-		return
-
-        #p20_22
-        export_pins(156)
-        setpindirection(156, "out")
-        writepins(156, 1)
-        unexport_pins(156)
-
-        #p20_23
-        export_pins(157)
-        setpindirection(157, "out")
-        writepins(157, 1)
-        unexport_pins(157)
-
-        #p20_15
-        export_pins(103)
-        setpindirection(103, "in")
-        value = readpins(103)
-        print "22The gpio value is: %d " %(int(value))
-        unexport_pins(103)
+	#p20_15
+        export_pins(116)
+        setpindirection(116, "in")
+        value = readpins(116)
+        print "116 The gpio value is: %d " %(int(value))
+        unexport_pins(116)
         if value == 1:
                 gpio_flag = 0
         else:
